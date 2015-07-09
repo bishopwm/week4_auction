@@ -1,0 +1,11 @@
+<h3>User Info</h3>
+
+<p>
+Name: 
+	<%= @user.show_name %>
+<br />
+Email: 
+	<%= @user.show_email %>
+</p>
+
+<%= link_to "Post New Product", new_user_product_path(@user) %>
