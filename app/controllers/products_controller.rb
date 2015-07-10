@@ -12,10 +12,6 @@ class ProductsController < ApplicationController
 
 	end
 
-	def show
-		@product = Product.find(params[:user_id]) ||
-		render_404(params)
-	end
 
 	def create
 		@user = User.find(params[:user_id])
@@ -24,22 +20,31 @@ class ProductsController < ApplicationController
 			@product.save
 			redirect_to user_products_path(@user), notice: "Post was successfull!"
 		else
-		render :new
+			render :new
+		end
 	end
+
+		def show
+		#@user = User.find(params[:user_id])
+		@product = Product.find(params[:id])
+		
+	end
+
 
 	def destroy
 		@user = User.find(params[:user_id])
 		@product = Product.find_by(id: params[:id]).try(:destroy)
-
-		
-		
 	end
-end
 
+	def all
+		# @products = @user.products
+		@all_products = Product.all
 
-private
+	end
 
-  def product_params
-    params.require(:product).permit(:user_id, :title, :description, :deadline)
-  end
+	private
+
+  	def product_params
+    	params.require(:product).permit(:user_id, :title, :description, :deadline)
+  	end
 end

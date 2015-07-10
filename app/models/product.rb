@@ -11,20 +11,5 @@ class Product < ActiveRecord::Base
 		order('user_id ASC')
 	end
 
-	def show_user_id
-		[user_id].compact.join(" - ")
-	end
-
-	def show_title
-		[title].compact.join(" - ")
-	end
-
-	def show_description
-		[description].compact.join(" - ")
-	end
-	
-	def show_deadline
-		[deadline].compact.join(" - ")
-	end
 
 end

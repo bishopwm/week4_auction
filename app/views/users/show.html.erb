@@ -8,4 +8,9 @@ Email:
 	<%= @user.show_email %>
 </p>
 
-<%= link_to "Post New Product", new_user_product_path(@user) %>
+<div>
+<%= link_to "Post New Product for #{@user.show_name}", new_user_product_path(@user) %>
+</div>
+<div>
+<%= link_to "View #{@user.show_name}'s Products", user_products_path(@user) %>
+</div>

@@ -1,19 +1,26 @@
 <h2>Products</h2>
-<h3><%= @product.title %></h3>
+
 
 <ul>
 	<% @products.each do |product| %>
-		<li>
-			<%= product.show_title %>
+		<li>Title:
+			<%= product.title %>
 		</li>
-		<li>
-			<%= product.show_user_id %>
-		<li>
-			<%= product.show_description %>
+		<li>Product ID:
+			<%= product.id %>
+		<li>Description:
+			<%= product.description %>
 		</li>
-		<li>
-			<%= product.show_deadline %>
+		<li>Deadline:
+			<%= product.deadline %>
 		</li>
+		<li>Post Created At:
+			<%= product.created_at %>
+		</li>
+		<li>User ID:
+			<%= product.user_id %>
+		<br />
+		<br />
 
 	<% end %>
 </ul>
