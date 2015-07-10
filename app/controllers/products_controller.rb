@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 	def index
 		@user = User.find(params[:user_id])
 		@products = @user.products
+		@product = @user.products.new
 	end
 
 	def new
@@ -21,7 +22,7 @@ class ProductsController < ApplicationController
 		@product = @user.products.new(product_params)
 		if @product.valid?
 			@product.save
-			render 'users/:id'
+			redirect_to user_products_path(@user), notice: "Post was successfull!"
 		else
 		render :new
 	end
@@ -30,7 +31,8 @@ class ProductsController < ApplicationController
 		@user = User.find(params[:user_id])
 		@product = Product.find_by(id: params[:id]).try(:destroy)
 
-		redirect_to user_products_path(@user)
+		
+		
 	end
 end
 

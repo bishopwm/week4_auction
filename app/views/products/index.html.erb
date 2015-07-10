@@ -1,10 +1,21 @@
 <h2>Products</h2>
+<h3><%= @product.title %></h3>
 
 <ul>
-	<% @product.each do |product| %>
+	<% @products.each do |product| %>
 		<li>
-			<%= link_to product.show_user_id, product_path(product) %>
+			<%= product.show_title %>
+		</li>
+		<li>
+			<%= product.show_user_id %>
+		<li>
+			<%= product.show_description %>
+		</li>
+		<li>
+			<%= product.show_deadline %>
 		</li>
 
 	<% end %>
 </ul>
+
+
