@@ -11,4 +11,11 @@ helper_method :current_user
 		end
 		@current_user
 	end
+
+	def authorize_user
+		unless current_user
+			flash[:message] = 'Please log in.'
+			redirect_to login_path
+		end
+	end
 end

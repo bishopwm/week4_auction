@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+	before_action :owner_only, except: [:index]
 
 	def index
 		@user = User.find(params[:user_id])
@@ -37,7 +38,6 @@ class ProductsController < ApplicationController
 	end
 
 	def all
-		# @products = @user.products
 		@all_products = Product.all
 
 	end
@@ -47,4 +47,11 @@ class ProductsController < ApplicationController
   	def product_params
     	params.require(:product).permit(:user_id, :title, :description, :deadline)
   	end
+
+  	def owner_only
+		if params[:user_id] != current_user.id
+			flash[:message] = "Not qualified"
+			redirect_to login_path
+		end
+	end
 end
