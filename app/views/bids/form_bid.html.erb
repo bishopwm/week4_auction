@@ -1,0 +1,23 @@
+<h2>Make a bid</h2>
+
+ <%= form_for [@product, @bids] do |f| %>
+
+
+
+	<div>Email:
+		<%= f.label :email %>
+		<br />
+		<%= f.text_field :email %>
+	</div>
+
+	<div>Bid Amount:
+		<%= f.label :bids %>
+		<br />
+		<%= f.text_field :bids %>
+	</div>
+
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

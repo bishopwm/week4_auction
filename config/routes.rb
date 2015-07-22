@@ -8,9 +8,13 @@ get 'products/all' => 'products#all'
 post 'products' => 'products#create'
 #get 'product/:id' => 'products#show'
 
+get '/login' => 'sessions#new'
+post '/login' => 'sessions#create'
+get '/logout' => 'sessions#destroy'
 
 resources :users, only: [:show, :create, :new, :destroy] do
   resources :products, only: [:index, :show, :create, :new, :destroy]
+    resources :bids, only: [:create]
 end
 resources :products, only: [:show]
 

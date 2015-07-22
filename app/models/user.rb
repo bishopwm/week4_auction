@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
+	has_secure_password
 	has_many :products
 
 	validates :name, presence: true
 	validates :email, presence: true
+
 
 	def self.last_created(n)
 		order('name ASC')
