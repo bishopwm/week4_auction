@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+/* * {
+ 	color: white;
+ }*/
+
+.nav-tabs {
+	margin: 0;
+	padding: 2px;
+	background-color: white;
+}
+
+.warehouse_image {
+	width: auto;
+}
+
+.nav-tabs > li > a {
+	margin-right: 4em;
+}
+
+/*.background-container {
+	background-image: url("warehouse.jpg");
+	background-size:   cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}*/
+
+.all-products-list {
+	list-style-type: none;
+}
+
+/*.yield-container {
+	background-color: gray;
+
+}*/

@@ -9,8 +9,8 @@ Email:
 </p>
 
 <div>
-<%= link_to "Want to post a new product, #{@user.show_name}?", new_user_product_path(@user) %>
+<%= link_to "View #{@user.show_name}'s Products", user_products_path(@user) %>
 </div>
 <div>
-<%= link_to "View your Products", user_products_path(@user) %>
+<%= link_to "Want to post a new product, #{@user.show_name}?", new_user_product_path(@user) %>
 </div>

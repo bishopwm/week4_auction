@@ -1,12 +1,11 @@
-<h2>All Products</h2>
+<div class="all-products-container">
+	<h2>All Products</h2>
 
-<ul>
-	<% @all_products.each do |product| %>
-		<li>
-			<%= link_to product.title, product_path(product.id) %>
-		</li>
-
-
-	<% end %>
-</ul>
-
+	<ul class="all-products-list">
+		<% @all_products.each do |product| %>
+			<li>
+				<%= link_to product.title, product_path(product.id) %>
+			</li>
+		<% end %>
+	</ul>
+</div>

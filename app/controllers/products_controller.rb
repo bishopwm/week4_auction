@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-	before_action :owner_only, except: [:index]
+	before_action :owner_only, except: [:index, :all, :show]
 
 	def index
 		@user = User.find(params[:user_id])
@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
 	def new
 		@user = User.find(params[:user_id])
 		@product = @user.products.new
-
 	end
 
 
@@ -26,9 +25,7 @@ class ProductsController < ApplicationController
 	end
 
 		def show
-		#@user = User.find(params[:user_id])
 		@product = Product.find(params[:id])
-		
 	end
 
 
@@ -39,7 +36,6 @@ class ProductsController < ApplicationController
 
 	def all
 		@all_products = Product.all
-
 	end
 
 	private
@@ -49,7 +45,9 @@ class ProductsController < ApplicationController
   	end
 
   	def owner_only
-		if params[:user_id] != current_user.id
+  		p params
+  		p current_user
+		if params[:user_id].to_i != current_user.id
 			flash[:message] = "Not qualified"
 			redirect_to login_path
 		end
