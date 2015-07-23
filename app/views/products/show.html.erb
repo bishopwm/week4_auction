@@ -13,9 +13,6 @@
 	<strong>Deadline:</strong>
 		<%= @product.deadline %>
 	<br />
-	<strong>Date Posted:</strong>
-		<%= @product.created_at %>
-	<br />
 	<strong>Posted by:</strong>
 	<%= link_to @product.user.show_name, users_path %>
 </p>
