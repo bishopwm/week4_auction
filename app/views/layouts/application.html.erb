@@ -19,6 +19,13 @@
 				<%= link_to "Log-in", '/login' %>
 				<% end %>
 	        	</a></li>
+	        <li class="login-nav-tab pull-right">
+	        	<%= form_tag '/login' do %>
+				Username: <%= text_field_tag :username %>
+				Password: <%= password_field_tag :password %>
+				<%= submit_tag "Submit" %>
+				<% end %>
+	        </li>
      	  </ul>
      </div>
   </nav>
@@ -26,15 +33,23 @@
 <% flash.each do |key, msg| %>
 <%= content_tag :div, msg, id: key, style: "color: red;" %>
 <% end %>
-<div class="row">
-  <div class="col-md-3">
+<div class="row row1">
+  <div class="col-md-4 left-column">
 	<div class="yield-container">
 		<%= yield %>
 	</div> 
  </div>
- <div class="col-md-9">
- 	<%= image_tag "warehouse.jpg", :class => "warehouse_image" %>
+  <div class="col-md-8 right-column">
+  </div>
 </div>
+
+<div class="row row2">
+  <div class="col-md-12">
+
+  </div>
+</div>
+
+
 
 </body>
 </html>

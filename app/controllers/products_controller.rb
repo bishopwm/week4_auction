@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
 		end
 	end
 
-		def show
+	def show
 		@product = Product.find(params[:id])
 	end
 
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
 	private
 
   	def product_params
-    	params.require(:product).permit(:user_id, :title, :description, :deadline)
+    	params.require(:product).permit(:user_id, :title, :description, :deadline, :photo)
   	end
 
   	def owner_only

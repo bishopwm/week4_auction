@@ -14,9 +14,8 @@
  *= require_self
  */
 
-/* * {
- 	color: white;
- }*/
+
+
 
 .nav-tabs {
 	margin: 0;
@@ -24,26 +23,37 @@
 	background-color: white;
 }
 
-.warehouse_image {
-	width: auto;
-}
 
 .nav-tabs > li > a {
 	margin-right: 4em;
 }
+.login-nav-tab {
+	margin-top: 2em;
+}
 
-/*.background-container {
-	background-image: url("warehouse.jpg");
-	background-size:   cover;
-    background-repeat: no-repeat;
-    background-position: center center; 
-}*/
+
 
 .all-products-list {
 	list-style-type: none;
 }
 
-/*.yield-container {
-	background-color: gray;
+.yield-container {
+	margin-left: 2em;
 
-}*/
+}
+.left-column {
+	background-color: #BCBCBC;
+	height: 300px;
+}
+.right-column {
+	background-color: white;
+	height: 300px;
+}
+.row2 {
+	background-color: #BCBCBC;
+	height: 300px;
+}
+
+
+
+
