@@ -34,16 +34,14 @@
   </nav>
     
 <% flash.each do |key, msg| %>
-<%= content_tag :div, msg, id: key, style: "color: red;" %>
+<%= content_tag :div, msg, id: key, style: "color: white; background-color: maroon;" %>
 <% end %>
 <div class="row row1">
-  <div class="col-md-4 left-column">
+  <div class="col-md-10 left-column">
 	<div class="yield-container">
 		<%= yield %>
 	</div> 
  </div>
-  <div class="col-md-8 right-column">
-  </div>
 </div>
 
 <div class="row row2">

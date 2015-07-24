@@ -38,6 +38,23 @@ class ProductsController < ApplicationController
 		@all_products = Product.all
 	end
 
+	def edit
+		@user = User.find(params[:user_id])
+	    @products = @user.products
+	    @product = Product.find(params[:id])
+
+	end
+
+	def update
+	    @product = Product.find_by(id: params[:id])
+
+	    if @product.update_attributes(product_params)
+	      redirect_to product_path, notice: 'Product was successfully updated.'
+	    else
+	      render :edit
+	    end
+	end
+
 	private
 
   	def product_params
@@ -47,6 +64,7 @@ class ProductsController < ApplicationController
   	def owner_only
   		p params
   		p current_user
+  		current_user = User.find(params[:user_id])
 		if params[:user_id].to_i != current_user.id
 			flash[:message] = "Not qualified"
 			redirect_to login_path

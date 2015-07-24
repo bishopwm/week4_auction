@@ -13,7 +13,7 @@ post '/login' => 'sessions#create'
 get '/logout' => 'sessions#destroy'
 
 resources :users, only: [:show, :create, :new, :destroy] do
-  resources :products, only: [:index, :show, :create, :new, :destroy]
+  resources :products, only: [:index, :show, :create, :new, :destroy, :edit, :update]
     resources :bids, only: [:create, :show, :new, :index]
 end
 resources :products, only: [:show]

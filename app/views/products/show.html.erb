@@ -20,6 +20,13 @@
 	<%= @product.user.show_name %>
 	<br />
 	<%= link_to "View #{@product.user.show_name}'s Other Products", user_products_path(@product.user_id) %>
-</p>
+	<br />
+	<%= link_to "Place Bid", new_user_bid_path(@product.user_id) %>
+	<hr />
+	
+</p?
+
 <hr />
-<%= link_to "Place a bid", new_user_bid_path(@product.user_id) %>
+<%= link_to "Is this yours? Edit Product", edit_user_product_path(@product.user_id, @product.id) %>
+<br />
+<%= link_to "Go Back", products_all_path %>

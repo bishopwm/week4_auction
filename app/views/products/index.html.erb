@@ -3,7 +3,6 @@
 
 <ul>
 	<% @products.each do |product| %>
-		<li><%= image_tag @product.photo.url %></li>
 		<li>Title:
 			<%= product.title %>
 		</li>
@@ -21,10 +20,10 @@
 		<li>Posted by:
 			<%= @user.show_name %>
 		</li>
-		<br />
-		<br />
-
+		<hr />
 	<% end %>
+
 </ul>
 
+<%= link_to "All Products", products_all_path %>
 
