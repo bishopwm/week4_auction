@@ -11,6 +11,9 @@
 	      <ul class="nav nav-tabs">
 	        <li><a href="#"><%= link_to "Home", '/' %></a></li>
 	        <li><a href="#"><%= link_to "View Products", products_all_path %></a></li>
+	        <% if @new_product %>
+	        	<li><a href="#"><%= link_to "Post a Product", new_user_product_path(@new_product.user_id) %></a></li>
+	        <% end %>
 	        <li><a href="#"><%= link_to "Sign Up", new_user_path %></a></li>
 	        <li><a href="#">
 	        	<% if current_user %>
@@ -21,8 +24,8 @@
 	        	</a></li>
 	        <li class="login-nav-tab pull-right">
 	        	<%= form_tag '/login' do %>
-				Username: <%= text_field_tag :username %>
-				Password: <%= password_field_tag :password %>
+				Username <%= text_field_tag :username %>
+				Password <%= password_field_tag :password %>
 				<%= submit_tag "Submit" %>
 				<% end %>
 	        </li>

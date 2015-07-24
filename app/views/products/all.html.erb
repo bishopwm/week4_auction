@@ -3,7 +3,6 @@
 
 	<ul class="all-products-list">
 		<% @all_products.each do |product| %>
-			<li><%= image_tag product.photo.url %></li>
 			<li>
 				<%= link_to product.title, product_path(product.id) %>
 			</li>

@@ -1,0 +1,21 @@
+ <%= form_for [@user, @bid] do |f| %>
+
+
+
+	<div>
+		<%= f.label :name %>
+		<br />
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :bid %>
+		<br />
+		<%= f.text_field :bid %>
+	</div>
+
+
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

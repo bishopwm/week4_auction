@@ -14,7 +14,7 @@ get '/logout' => 'sessions#destroy'
 
 resources :users, only: [:show, :create, :new, :destroy] do
   resources :products, only: [:index, :show, :create, :new, :destroy]
-    resources :bids, only: [:create]
+    resources :bids, only: [:create, :show, :new, :index]
 end
 resources :products, only: [:show]
 

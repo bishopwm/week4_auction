@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to '/products/all'
 		else
-			redirect_to '/login'
+			redirect_to '/login', notice: "Incorrect Username or Password"
 		end
 	end
 

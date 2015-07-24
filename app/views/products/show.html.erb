@@ -1,5 +1,8 @@
 <h3>Product Info</h3>
-<%= image_tag @product.photo.url %>
+<% if @product.photo != nil %>
+	<%= image_tag @product.photo.url %>
+<% end %>
+
 <p>
 	<strong>Product:</strong>
 		<%= @product.title %>
@@ -14,6 +17,9 @@
 		<%= @product.deadline %>
 	<br />
 	<strong>Posted by:</strong>
-	<%= link_to @product.user.show_name, users_path %>
+	<%= @product.user.show_name %>
+	<br />
+	<%= link_to "View #{@product.user.show_name}'s Other Products", user_products_path(@product.user_id) %>
 </p>
 <hr />
+<%= link_to "Place a bid", new_user_bid_path(@product.user_id) %>

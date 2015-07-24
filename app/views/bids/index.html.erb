@@ -1,0 +1,15 @@
+<h2>Bids</h2>
+
+
+<ul>
+	<% @bids.each do |bid| %>
+		<li>Bid Amount:
+			$<%= bid.bid %>
+		</li>
+		<li>Bid ID:
+			<%= bid.id %>
+		</li>
+		<hr />
+
+	<% end %>
+</ul>
