@@ -6,8 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <nav class="nav">
+
+<nav class="nav">
 	      <ul class="nav nav-tabs">
 	        <li><a href="#"><%= link_to "Home", '/' %></a></li>
 	        <li><a href="#"><%= link_to "View Products", products_all_path %></a></li>
@@ -30,27 +30,25 @@
 				<% end %>
 	        </li>
      	  </ul>
-     </div>
+
   </nav>
+
+<body>
+  
+<div class="row">
+<div class="col-md-4 column-left">
     
 <% flash.each do |key, msg| %>
 <%= content_tag :div, msg, id: key, style: "color: white; background-color: maroon;" %>
 <% end %>
-<div class="row row1">
-  <div class="col-md-10 left-column">
-	<div class="yield-container">
-		<%= yield %>
-	</div> 
- </div>
+
+<%= yield %>
+
+</div>
+<div class="col-md-8 column-right">
 </div>
 
-<div class="row row2">
-  <div class="col-md-12">
-
-  </div>
 </div>
-
-
 
 </body>
 </html>

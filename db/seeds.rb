@@ -12,7 +12,7 @@ Product.destroy_all
 puts "--- Deleting all bids ---"
 Bid.destroy_all
 
-20.times do (
+6.times do (
 	def create_product_for(user)
 
     product = Product.create!(
