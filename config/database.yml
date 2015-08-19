@@ -7,6 +7,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
+  username: Will
   pool: 5
   timeout: 5000
 
@@ -25,4 +27,3 @@ production:
   <<: *default
   database: auction_production
   password: <%= ENV['AUCTION_DATABASE_PASSWORD'] %>
-

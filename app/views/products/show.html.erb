@@ -1,6 +1,6 @@
 <h3>Product Info</h3>
 <% if @product.photo != nil %>
-	<%= image_tag @product.photo.url %>
+	<%= image_tag @product.photo.url, :class => "product_photo" %>
 <% end %>
 
 <p>

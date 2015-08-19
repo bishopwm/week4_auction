@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+.product_photo {
+	width: 30%;
+}
 
 
 

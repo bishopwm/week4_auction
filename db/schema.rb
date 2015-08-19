@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20150724094434) do
     t.string   "title"
     t.text     "description"
     t.date     "deadline"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
