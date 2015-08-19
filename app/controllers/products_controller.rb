@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
 	def index
 		@user = User.find(params[:user_id])
 		@products = @user.products
-		@product = @user.products.new
+		# @product = @user.products.new
 	end
 
 	def new

@@ -18,29 +18,8 @@
 	width: 30%;
 }
 
-
-
-.column-right { 
-	background: url('/assets/auction.jpg') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	height: 600px;
-
-}
-
-
-
-
-
 .header {
 	margin-top: 0px;
-}
-
-.column-left {
-	height: 600px;
-}
-
-.colum_right {
-	height: 0;
 }
 
 .nav-tabs {
@@ -49,7 +28,6 @@
 	background-color: white;
 }
 
-
 .nav-tabs > li > a {
 	margin-right: 4em;
 }
@@ -57,25 +35,10 @@
 	margin-top: 2em;
 }
 
-
-
 .all-products-list {
 	list-style-type: none;
 }
 
-.yield-container {
-	margin-left: 2em;
-
-}
-/*.left-column {
-	background-color: #BCBCBC;
-	height: 600px;
-}*/
-
-/*.row2 {
-	background-color: #BCBCBC;
-	height: 300px;
-}*/
 
 
 
