@@ -14,8 +14,132 @@
  *= require_self
  */
 
+.home-div {
+	padding: 20px;
+	height: 250px;
+	width: 600px;
+	margin: -500px auto;
+	z-index: 1;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 20px;
+	font-family: 'Cinzel', serif;
+	text-align: center;
+
+	
+}
+
+.signup-container {
+	height: 440px;
+	width: 250px;
+	margin: 80px auto;
+	text-align: center;
+}
+
+.login-container {
+	height: 260px;
+	width: 250px;
+	margin: 80px auto;
+	text-align: center;
+}
+
+.bid-form-container {
+	height: 260px;
+	width: 250px;
+	margin: 80px auto;
+	text-align: center;
+}
+
+.all-bids-container {
+	height: 400px;
+	width: 300px;
+	margin: 80px auto;
+	font-family: 'Cinzel', serif;
+	padding-right: 50px;
+	text-align: center;	
+}
+
+.all-bids-list {
+	list-style-type: none;
+}
+
+.products-container {
+	height: 400px;
+	width: 300px;
+	margin: 80px auto;
+	font-family: 'Cinzel', serif;
+	padding-right: 50px;
+	text-align: center;
+}
+
+.products-header {
+	margin-left: 42px;
+	margin-bottom: 30px;
+}
+
+.product-info-container {
+	height: 600px;
+	width: 300px;
+	margin: 80px auto;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+
+.other-products-container {
+	height: 600px;
+	width: 300px;
+	margin: 80px auto;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+
+.other-products-list {
+	list-style-type: none;
+}
+
+.other-products-header {
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+
+.edit-products-container {
+	height: 600px;
+	width: 300px;
+	margin: 80px auto;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+
+
+.hero-img {
+	width: 100%;
+	height: 700px;
+	background-image: url("/assets/warehouse.jpg");
+	background-size: 100% 800px;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+.auction-header {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.site-description {
+	font-size: 22px;
+	color: rgba(64, 63, 63, 1);
+	font-weight: bold;
+}
+
+.hero-link {
+	font-weight: bold;
+	font-size: 22px;
+	margin-top: 40px;
+}
+
 .product_photo {
-	width: 30%;
+	width: 60%;
+	border-radius: 20px;
+	margin-bottom: 20px;
 }
 
 .header {
@@ -29,14 +153,21 @@
 }
 
 .nav-tabs > li > a {
-	margin-right: 4em;
+	margin-right: 1.5em;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 .login-nav-tab {
-	margin-top: 2em;
+	margin-top: 38px;
 }
 
 .all-products-list {
 	list-style-type: none;
+}
+
+.nav {
+	font-family: 'Cinzel', serif;
+	
 }
 
 

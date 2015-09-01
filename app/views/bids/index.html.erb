@@ -1,15 +1,17 @@
-<h2>Bids</h2>
+<div class="well all-bids-container">
+	<h2 style="margin-left: 30px;">Bids</h2>
 
 
-<ul>
-	<% @bids.each do |bid| %>
-		<li>Bid Amount:
-			$<%= bid.bid %>
-		</li>
-		<li>Bid ID:
-			<%= bid.id %>
-		</li>
-		<hr />
+	<ul class="all-bids-list">
+		<% @bids.each do |bid| %>
+			<li>Bid Amount:
+				$<%= bid.bid %>
+			</li>
+			<li>Bid ID:
+				<%= bid.id %>
+			</li>
+			<hr />
 
-	<% end %>
-</ul>
+		<% end %>
+	</ul>
+</div>

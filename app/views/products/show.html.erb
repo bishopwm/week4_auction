@@ -1,32 +1,37 @@
-<h3>Product Info</h3>
-<% if @product.photo != nil %>
-	<%= image_tag @product.photo.url, :class => "product_photo" %>
-<% end %>
+<div class="well product-info-container">
+	<link href='https://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
 
-<p>
-	<strong>Product:</strong>
-		<%= @product.title %>
-	<br />
-	<strong>Product ID:</strong>
-		<%= @product.id %>
-	<br />
-	<strong>Description:</strong>
-		<%= @product.description %>
-	<br />
-	<strong>Deadline:</strong>
-		<%= @product.deadline %>
-	<br />
-	<strong>Posted by:</strong>
-	<%= @product.user.show_name %>
-	<br />
-	<%= link_to "View #{@product.user.show_name}'s Other Products", user_products_path(@product.user_id) %>
-	<br />
-	<%= link_to "Place Bid", new_user_bid_path(@product.user_id) %>
+	<h1>Product Info</h1>
+	<% if @product.photo != nil %>
+		<%= image_tag @product.photo.url, :class => "product_photo" %>
+	<% end %>
+
+	<p>
+		<strong>Product:</strong>
+			<%= @product.title %>
+		<br />
+		<strong>Product ID:</strong>
+			<%= @product.id %>
+		<br />
+		<strong>Description:</strong>
+			<%= @product.description %>
+		<br />
+		<strong>Deadline:</strong>
+			<%= @product.deadline %>
+		<br />
+		<strong>Posted by:</strong>
+		<%= @product.user.show_name %>
+		<br />
+		<br />
+		<%= link_to "View #{@product.user.show_name}'s Other Products", user_products_path(@product.user_id) %>
+		<br />
+		<%= link_to "Place Bid", new_user_bid_path(@product.user_id) %>
+
+		
+	</p>
+
 	<hr />
-	
-</p>
-
-<hr />
-<%= link_to "Is this yours? Edit Product", edit_user_product_path(@product.user_id, @product.id) %>
-<br />
-<%= link_to "Go Back", products_all_path %>
+	<%= link_to "Is this yours? Edit Product", edit_user_product_path(@product.user_id, @product.id) %>
+	<br />
+	<%= link_to "Go Back", products_all_path %>
+</div>

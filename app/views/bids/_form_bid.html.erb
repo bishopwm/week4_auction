@@ -1,14 +1,17 @@
- <%= form_for [@user, @bid] do |f| %>
+<div class="well bid-form-container">
+	<h2>Make a Bid</h2>
+	 <%= form_for [@user, @bid] do |f| %>
 
 
-	<div>
-		<%= f.label "Amount (USD)" %>
-		<br />
-		<%= f.text_field :bid %>
-	</div>
+		<div>
+			<%= f.label "Amount (USD)" %>
+			<br />
+			<%= f.text_field :bid %>
+		</div>
 
 
-	<div>
-		<%= f.submit %>
-	</div>
-<% end %>
+		<div style="margin-top: 20px;">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>

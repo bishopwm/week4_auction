@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 
 <nav class="nav">
@@ -35,8 +37,7 @@
 
 <body>
   
-<div class="row">
-<div class="col-md-4 column-left">
+
     
 <% flash.each do |key, msg| %>
 <%= content_tag :div, msg, id: key, style: "color: white; background-color: maroon;" %>
@@ -44,11 +45,7 @@
 
 <%= yield %>
 
-</div>
-<div class="col-md-8 column-right">
-</div>
 
-</div>
 
 </body>
 </html>
